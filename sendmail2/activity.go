@@ -56,12 +56,12 @@ func (a *Activity) Eval(ctx activity.Context) (done bool, err error) {
 	cmdstring := input.Cmdstring
 
 	var cmd *exec.Cmd
-	var err error
+	var err1 error
 
 	cmd = exec.Command("wget", cmdstring, "-O", imagepath)
 	time.Sleep(time.Duration(1) * time.Second)
-	if _, err = cmd.Output(); err != nil {
-		fmt.Println(err)
+	if _, err1 = cmd.Output(); err1 != nil {
+		fmt.Println(err1)
 	}
 
 	if !exists(imagepath) {
