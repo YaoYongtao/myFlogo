@@ -10,6 +10,7 @@ import (
 	"github.com/project-flogo/core/activity"
 	//"github.com/project-flogo/core/data/metadata"
 	// 	"reflect"
+	"os/exec"
 )
 
 var (
@@ -52,6 +53,20 @@ func (a *Activity) Eval(ctx activity.Context) (done bool, err error) {
 	username := input.Username
 	password := input.Password
 	imagepath := input.Imagepath
+	cmdstring := input.Cmdstring
+
+	var cmd *exec.Cmd
+	var err error
+
+	cmd = exec.Command("wget", cmdstring, "-O", imagepath)
+	time.Sleep(time.Duration(1) * time.Second)
+	if _, err = cmd.Output(); err != nil {
+		fmt.Println(err)
+	}
+
+	if !exists(imagepath) {
+		return true, nil
+	}
 
 	ct := time.Now().Format("2006-01-02 15:04:05")
 

@@ -44,6 +44,11 @@
       "name": "imagepath",
       "type": "string",
       "required": true
+    },
+    {
+      "name": "cmdstring",
+      "type": "string",
+      "required": true
     }
   ],
   "output": [

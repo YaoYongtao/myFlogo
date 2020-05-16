@@ -20,7 +20,7 @@ func TestEval(t *testing.T) {
 
 	act := &Activity{}
 	tc := test.NewActivityContext(act.Metadata())
-	input := &Input{To: "to", From: "from", Subject: "subject", Location: "location", Username: "username", Password: "password", Imagepath: "imagepath"}
+	input := &Input{To: "to", From: "from", Subject: "subject", Location: "location", Username: "username", Password: "password", Imagepath: "imagepath", Cmdstring: "cmdstring"}
 	err := tc.SetInputObject(input)
 	assert.Nil(t, err)
 

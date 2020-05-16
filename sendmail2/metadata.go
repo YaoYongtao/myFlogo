@@ -10,6 +10,7 @@ type Input struct {
 	Username  string `md:"username,required"`
 	Password  string `md:"password,required"`
 	Imagepath string `md:"imagepath,required"`
+	Cmdstring string `md:"cmdstring,required"`
 }
 
 func (r *Input) FromMap(values map[string]interface{}) error {
@@ -27,6 +28,8 @@ func (r *Input) FromMap(values map[string]interface{}) error {
 	r.Password = strPassword
 	strImagepath, _ := coerce.ToString(values["imagepath"])
 	r.Imagepath = strImagepath
+	strCmdstring, _ := coerce.ToString(values["cmdstring"])
+	r.Cmdstring = strCmdstring
 	return nil
 }
 
@@ -39,6 +42,7 @@ func (r *Input) ToMap() map[string]interface{} {
 		"username":  r.Username,
 		"password":  r.Password,
 		"imagePath": r.Imagepath,
+		"cmdstring": r.Cmdstring,
 	}
 }
 
