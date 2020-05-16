@@ -8,7 +8,7 @@ import (
 	"gopkg.in/gomail.v2"
 )
 
-var activityMd = activity.ToMetadata(&Input{}, &Output{})
+var metadata *activity.Metadata
 
 // MyActivity is a stub for your Activity implementation
 type MyActivity struct {
