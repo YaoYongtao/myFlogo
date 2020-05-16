@@ -45,7 +45,7 @@ func (a *Activity) Eval(ctx activity.Context) (done bool, err error) {
 		return true, err
 	}
 	// fmt.Printf("Input serial: %s\n", input.Serial)
-	to := input.Io
+	to := input.To
 	from := input.From
 	subject := input.Subject
 	location := input.Location
