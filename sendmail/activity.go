@@ -8,7 +8,41 @@ import (
 	"gopkg.in/gomail.v2"
 )
 
-var activityMd *activity.Metadata
+// var activityMd *activity.Metadata
+
+// // MyActivity is a stub for your Activity implementation
+// type MyActivity struct {
+// 	metadata *activity.Metadata
+// }
+
+// // NewActivity creates a new activity
+// func NewActivity(metadata *activity.Metadata) activity.Activity {
+// 	return &MyActivity{metadata: metadata}
+// }
+
+// // Metadata implements activity.Activity.Metadata
+// func (a *MyActivity) Metadata() *activity.Metadata {
+// 	return a.metadata
+// }
+
+// func init() {
+// 	_ = activity.Register(&Activity{})
+// }
+
+// //New optional factory method, should be used if one activity instance per configuration is desired
+// func New(ctx activity.InitContext) (activity.Activity, error) {
+// 	act := &Activity{} //add aSetting to instance
+// 	return act, nil
+// }
+
+// // Activity is an sample Activity that can be used as a base to create a custom activity
+// type Activity struct {
+// }
+
+// // Metadata returns the activity's metadata
+// func (a *Activity) Metadata() *activity.Metadata {
+// 	return activityMd
+// }
 
 // MyActivity is a stub for your Activity implementation
 type MyActivity struct {
@@ -23,25 +57,6 @@ func NewActivity(metadata *activity.Metadata) activity.Activity {
 // Metadata implements activity.Activity.Metadata
 func (a *MyActivity) Metadata() *activity.Metadata {
 	return a.metadata
-}
-
-func init() {
-	_ = activity.Register(&Activity{})
-}
-
-//New optional factory method, should be used if one activity instance per configuration is desired
-func New(ctx activity.InitContext) (activity.Activity, error) {
-	act := &Activity{} //add aSetting to instance
-	return act, nil
-}
-
-// Activity is an sample Activity that can be used as a base to create a custom activity
-type Activity struct {
-}
-
-// Metadata returns the activity's metadata
-func (a *Activity) Metadata() *activity.Metadata {
-	return activityMd
 }
 
 // Eval implements activity.Activity.Eval
