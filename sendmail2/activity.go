@@ -45,13 +45,13 @@ func (a *Activity) Eval(ctx activity.Context) (done bool, err error) {
 		return true, err
 	}
 	// fmt.Printf("Input serial: %s\n", input.Serial)
-	to := input.to
-	from := input.from
-	subject := input.subject
-	location := input.location
-	username := input.username
-	password := input.password
-	imagepath := input.imagepath
+	to := input.Io
+	from := input.From
+	subject := input.Subject
+	location := input.Location
+	username := input.Username
+	password := input.Password
+	imagepath := input.Imagepath
 
 	ct := time.Now().Format("2006-01-02 15:04:05")
 
@@ -73,7 +73,7 @@ func (a *Activity) Eval(ctx activity.Context) (done bool, err error) {
 		panic(err)
 	}
 
-	output := &Output{result: "The email has been sent to " + to}
+	output := &Output{Result: "The email has been sent to " + to}
 	// output := &Output{Serial: `te[{:,"st`}
 	err = ctx.SetOutputObject(output)
 	if err != nil {
