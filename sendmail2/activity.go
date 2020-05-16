@@ -60,9 +60,11 @@ func (a *Activity) Eval(ctx activity.Context) (done bool, err error) {
 	m.SetHeader("To", to)
 	m.SetHeader("Subject", subject)
 	var body string
-	body = fmt.Sprintf("%s<p><b>%s</b></p><p>%s</p>",
+	// body = fmt.Sprintf("%s<p><b>%s</b></p><p>%s</p>",
+	// 	"<p>The screenshot is from the camera at the following location:</p>",
+	// 	location, ct)
+	body = fmt.Sprintf("%s<p><b><a href=\"https://www.google.com/maps/place/5057+Woodward+Ave,+Detroit,+MI+48202/@42.3574234,-83.0675309,17z/data=!3m1!4b1!4m5!3m4!1s0x8824d2bc5e76f2b5:0xe061b6afdb1d01fd!8m2!3d42.3574234!4d-83.0653422\">%s</a></b></p><p>%s</p>",
 		"<p>The screenshot is from the camera at the following location:</p>",
-		location, ct)
 	m.SetBody("text/html", body)
 	m.Attach(imagepath)
 
