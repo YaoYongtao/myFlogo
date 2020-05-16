@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/TIBCOSoftware/flogo-lib/core/activity"
+	"github.com/project-flogo/core/activity"
 	"gopkg.in/gomail.v2"
 )
 
