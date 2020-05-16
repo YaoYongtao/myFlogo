@@ -26,9 +26,9 @@ import (
 // 	return a.metadata
 // }
 
-// func init() {
-// 	_ = activity.Register(&Activity{})
-// }
+func init() {
+	// _ = activity.Register(&Activity{})
+}
 
 // //New optional factory method, should be used if one activity instance per configuration is desired
 // func New(ctx activity.InitContext) (activity.Activity, error) {
