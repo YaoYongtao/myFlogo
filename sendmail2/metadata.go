@@ -32,13 +32,13 @@ func (r *Input) FromMap(values map[string]interface{}) error {
 
 func (r *Input) ToMap() map[string]interface{} {
 	return map[string]interface{}{
-		"to": r.to,
-		"from": r.from,
-		"subject": r.subject,
-		"location": r.location,
-		"username": r.username,
-		"password": r.password,
-		"imagePath":r.imagepath
+		"to":        r.to,
+		"from":      r.from,
+		"subject":   r.subject,
+		"location":  r.location,
+		"username":  r.username,
+		"password":  r.password,
+		"imagePath": r.imagepath,
 	}
 }
 
@@ -54,6 +54,6 @@ func (o *Output) FromMap(values map[string]interface{}) error {
 
 func (o *Output) ToMap() map[string]interface{} {
 	return map[string]interface{}{
-		"result": o.result
+		"result": o.result,
 	}
 }
