@@ -1,0 +1,55 @@
+{
+  "name": "age-analysis-activity",
+  "type": "flogo:activity",
+  "version": "0.0.1",
+  "title": "Age Analysis",
+  "description": "Age Analysis Activity",
+  "homepage": "https://github.com/flashlight10086/EdgeBox_pub/tree/master/AgeAnalysis",
+  "settings": [
+ 
+  ],
+  "input": [
+    {
+      "name": "to",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "from",
+      "type": "string",
+      "required": true
+    },
+
+    {
+      "name": "subject",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "imagepath",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "name": "result",
+      "type": "string"
+    }
+  ]
+}
